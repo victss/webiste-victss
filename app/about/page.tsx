@@ -16,7 +16,7 @@ export default function AboutPage() {
                 India's Leading Odoo Based Service Provider
               </h1>
               <p className="text-xl text-blue-100">
-                VICTSS is a premier IT service provider specializing in Odoo implementation, customization,
+                VICTSS is a premier IT service provider specializing in ERP Odoo implementation, customization,
                 and support. With years of experience and a team of experts, we help businesses transform
                 their operations and achieve their goals.
               </p>
