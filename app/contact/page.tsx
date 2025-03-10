@@ -42,7 +42,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-medium">Ranchi Office (Head Office)</h3>
                 <p className="text-sm text-muted-foreground">
-                  Airport Road,
+                  Airport Road
                   <br />
                   Ranchi, Jharkhand
                 </p>
