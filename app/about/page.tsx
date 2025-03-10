@@ -17,7 +17,7 @@ export default function AboutPage() {
               </h1>
               <p className="text-xl text-blue-100">
                 VICTSS is a premier IT service provider specializing in ERP Odoo implementation, customization,
-                and support. With years of experience and a team of certified experts, we help businesses transform
+                and support. With years of experience and a team of experts, we help businesses transform
                 their operations and achieve their goals.
               </p>
             </div>
