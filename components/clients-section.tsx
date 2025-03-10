@@ -37,7 +37,7 @@ export function ClientsSection() {
                   <img
                     src={client.logo}
                     alt={client.alt}
-                    className="h-16 object-contain opacity-70 hover:opacity-100 transition-all shadow-md hover:shadow-lg"
+                    className="h-20 object-contain opacity-70 hover:opacity-100 transition-all shadow-md hover:shadow-lg"
                   />
                 </div>
               ))}

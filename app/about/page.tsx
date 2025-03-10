@@ -16,16 +16,16 @@ export default function AboutPage() {
                 India's Leading Odoo Service Provider
               </h1>
               <p className="text-xl text-blue-100">
-                Loyal IT Solutions is a premier IT service provider specializing in Odoo implementation, customization,
+                VICTSS is a premier IT service provider specializing in Odoo implementation, customization,
                 and support. With years of experience and a team of certified experts, we help businesses transform
                 their operations and achieve their goals.
               </p>
             </div>
             <div className="flex items-center justify-center">
               <img
-                alt="Loyal IT Solutions Team"
+                alt="VICTSS Team"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center"
-                src="/placeholder.svg?height=400&width=600"
+                src="https://www.infinitivehost.com/blog/wp-content/uploads/2024/06/Getting-Started-with-Odoo-A-Beginners-Guide-1170x700.webp?height=400&width=600"
               />
             </div>
           </div>
@@ -39,7 +39,7 @@ export default function AboutPage() {
               <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-600">Our Story</div>
               <h2 className="text-3xl font-bold tracking-tighter">From Humble Beginnings to Industry Leaders</h2>
               <p className="text-muted-foreground md:text-lg">
-                Founded in 2010, Loyal IT Solutions began as a small team of passionate IT professionals with a vision
+                Founded in 2022, VICTSS began as a small team of passionate IT professionals with a vision
                 to provide high-quality, affordable IT solutions to businesses of all sizes. Over the years, we've grown
                 into a leading IT service provider with a focus on Odoo implementation and customization.
               </p>
@@ -184,7 +184,7 @@ export default function AboutPage() {
               <img
                 alt="Our Team"
                 className="aspect-video overflow-hidden rounded-xl object-cover object-center shadow-xl"
-                src="/placeholder.svg?height=400&width=600"
+                src="https://www.businessalligators.com/wp-content/uploads/2019/08/IT-team-building.jpg?height=400&width=600"
               />
             </div>
             <div className="space-y-4">

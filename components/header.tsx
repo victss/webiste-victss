@@ -179,7 +179,7 @@ ListItem.displayName = "ListItem"
 const services = [
   {
     title: "Odoo Services",
-    href: "/services/odoo",
+    href: "/services/odoo-solutions",
     description: "Complete Odoo implementation, customization, and support services.",
   },
   {
@@ -189,12 +189,12 @@ const services = [
   },
   {
     title: "Web Application",
-    href: "/services/web-application",
+    href: "/services/web-development",
     description: "Custom web applications tailored to your specific business requirements.",
   },
   {
-    title: "ERP Deployment",
-    href: "/services/erp-deployment",
+    title: "ERP Implementation",
+    href: "/services/erp-implementation",
     description: "End-to-end ERP implementation and customization services.",
   },
   {
@@ -204,8 +204,18 @@ const services = [
   },
   {
     title: "Mobile Application",
-    href: "/services/mobile-application",
+    href: "/services/mobile-development",
     description: "Native and cross-platform mobile app development.",
+  },
+  {
+    title: "OnlyOffice Implementation",
+    href: "/services/only-office",
+    description: "Collaborative office suite that allows users to create, edit, and share documents, spreadsheets, and presentations online.",
+  },
+  {
+    title: "MathType Implementation",
+    href: "/services/math-type",
+    description: "Make equations accessible to all users with MathML and screen reader support.",
   },
 ]
 
@@ -214,36 +224,50 @@ const solutions = [
     title: "Wholesale",
     href: "/solutions/wholesale",
     description: "Specialized IT solutions for wholesale distribution businesses.",
+    icon: "fas fa-boxes", // FontAwesome icon for Wholesale
+    iconSize: "24px", // Icon size
   },
   {
     title: "Service Management",
     href: "/solutions/service-management",
     description: "Streamline service operations and improve customer satisfaction.",
+    icon: "fas fa-cogs", // FontAwesome icon for Service Management
+    iconSize: "24px",
   },
   {
     title: "Project Management",
     href: "/solutions/project-management",
     description: "Tools and systems to manage projects efficiently and effectively.",
+    icon: "fas fa-tasks", // FontAwesome icon for Project Management
+    iconSize: "24px",
   },
   {
     title: "Manufacturing",
     href: "/solutions/manufacturing",
     description: "Optimize manufacturing processes with our specialized solutions.",
+    icon: "fas fa-industry", // FontAwesome icon for Manufacturing
+    iconSize: "24px",
   },
   {
     title: "Logistics",
     href: "/solutions/logistics",
     description: "Enhance logistics operations with our technology solutions.",
+    icon: "fas fa-truck", // FontAwesome icon for Logistics
+    iconSize: "24px",
   },
   {
     title: "HRMS",
     href: "/solutions/hrms",
     description: "Comprehensive human resource management systems for your business.",
+    icon: "fas fa-users", // FontAwesome icon for HRMS
+    iconSize: "24px",
   },
   {
     title: "Hospitality Management",
     href: "/solutions/hospitality",
     description: "Specialized solutions for the hospitality industry.",
+    icon: "fas fa-concierge-bell", // FontAwesome icon for Hospitality Management
+    iconSize: "24px",
   },
 ]
 

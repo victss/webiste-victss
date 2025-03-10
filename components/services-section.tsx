@@ -1,13 +1,18 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Code, Database, BarChart, Headphones, Cloud } from "lucide-react"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Code, Database, BarChart, Headphones, Cloud } from "lucide-react";
 
 export function ServicesSection() {
   return (
-    <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-background">
+    <section
+      id="services"
+      className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-blue-50 to-purple-50 transition-all duration-500"
+    >
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Services</div>
+            <div className="inline-block rounded-lg bg-blue-600 px-3 py-1 text-sm text-white">
+              Services
+            </div>
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Our IT Solutions</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               We offer a comprehensive range of IT services with specialized expertise in Odoo implementation.
@@ -15,101 +20,101 @@ export function ServicesSection() {
           </div>
         </div>
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-8 md:mt-12">
-          <Card>
-            <CardHeader className="pb-2">
-              <Database className="h-12 w-12 text-blue-600 mb-2" />
-              <CardTitle>Odoo Services</CardTitle>
-              <CardDescription>Complete Odoo implementation, customization, and support services.</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ul className="list-disc pl-5 space-y-1 text-sm">
-                <li>Odoo implementation & migration</li>
-                <li>Custom module development</li>
-                <li>Integration with third-party apps</li>
-                <li>Odoo training & support</li>
-              </ul>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader className="pb-2">
-              <Cloud className="h-12 w-12 text-blue-600 mb-2" />
-              <CardTitle>DevOps</CardTitle>
-              <CardDescription>Streamline your development and operations with our DevOps expertise.</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ul className="list-disc pl-5 space-y-1 text-sm">
-                <li>CI/CD pipeline implementation</li>
-                <li>Infrastructure as code</li>
-                <li>Container orchestration</li>
-                <li>Monitoring & logging</li>
-              </ul>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader className="pb-2">
-              <Code className="h-12 w-12 text-blue-600 mb-2" />
-              <CardTitle>Web Application</CardTitle>
-              <CardDescription>
-                Custom web applications tailored to your specific business requirements.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ul className="list-disc pl-5 space-y-1 text-sm">
-                <li>Responsive web design</li>
-                <li>Progressive web apps</li>
-                <li>E-commerce solutions</li>
-                <li>Web portal development</li>
-              </ul>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader className="pb-2">
-              <Database className="h-12 w-12 text-blue-600 mb-2" />
-              <CardTitle>ERP Deployment</CardTitle>
-              <CardDescription>End-to-end ERP implementation and customization services.</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ul className="list-disc pl-5 space-y-1 text-sm">
-                <li>Business process analysis</li>
-                <li>ERP system selection</li>
-                <li>Implementation & configuration</li>
-                <li>Data migration & training</li>
-              </ul>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader className="pb-2">
-              <BarChart className="h-12 w-12 text-blue-600 mb-2" />
-              <CardTitle>IT Consulting</CardTitle>
-              <CardDescription>Strategic IT guidance to help your business achieve its goals.</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ul className="list-disc pl-5 space-y-1 text-sm">
-                <li>IT strategy development</li>
-                <li>Digital transformation</li>
-                <li>Technology roadmapping</li>
-                <li>IT governance</li>
-              </ul>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader className="pb-2">
-              <Headphones className="h-12 w-12 text-blue-600 mb-2" />
-              <CardTitle>Mobile Application</CardTitle>
-              <CardDescription>Native and cross-platform mobile app development.</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ul className="list-disc pl-5 space-y-1 text-sm">
-                <li>iOS & Android development</li>
-                <li>React Native & Flutter</li>
-                <li>App store optimization</li>
-                <li>Mobile app maintenance</li>
-              </ul>
-            </CardContent>
-          </Card>
+          {services.map((service, index) => (
+            <Card
+              key={index}
+              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-105"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <CardHeader className="relative pb-2">
+                <service.icon className="h-12 w-12 text-blue-600 mb-2 group-hover:text-white transition-colors duration-300" />
+                <CardTitle className="group-hover:text-white transition-colors duration-300">
+                  {service.title}
+                </CardTitle>
+                <CardDescription className="group-hover:text-white/80 transition-colors duration-300">
+                  {service.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="relative">
+                <ul className="list-disc pl-5 space-y-1 text-sm group-hover:text-white/90 transition-colors duration-300">
+                  {service.features.map((feature, i) => (
+                    <li key={i}>{feature}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
+const services = [
+  {
+    icon: Database,
+    title: "Odoo Services",
+    description: "Complete Odoo implementation, customization, and support services.",
+    features: [
+      "Odoo implementation & migration",
+      "Custom module development",
+      "Integration with third-party apps",
+      "Odoo training & support",
+    ],
+  },
+  {
+    icon: Cloud,
+    title: "DevOps",
+    description: "Streamline your development and operations with our DevOps expertise.",
+    features: [
+      "CI/CD pipeline implementation",
+      "Infrastructure as code",
+      "Container orchestration",
+      "Monitoring & logging",
+    ],
+  },
+  {
+    icon: Code,
+    title: "Web Application",
+    description: "Custom web applications tailored to your specific business requirements.",
+    features: [
+      "Responsive web design",
+      "Progressive web apps",
+      "E-commerce solutions",
+      "Web portal development",
+    ],
+  },
+  {
+    icon: Database,
+    title: "ERP Deployment",
+    description: "End-to-end ERP implementation and customization services.",
+    features: [
+      "Business process analysis",
+      "ERP system selection",
+      "Implementation & configuration",
+      "Data migration & training",
+    ],
+  },
+  {
+    icon: BarChart,
+    title: "IT Consulting",
+    description: "Strategic IT guidance to help your business achieve its goals.",
+    features: [
+      "IT strategy development",
+      "Digital transformation",
+      "Technology roadmapping",
+      "IT governance",
+    ],
+  },
+  {
+    icon: Headphones,
+    title: "Mobile Application",
+    description: "Native and cross-platform mobile app development.",
+    features: [
+      "iOS & Android development",
+      "React Native & Flutter",
+      "App store optimization",
+      "Mobile app maintenance",
+    ],
+  },
+];

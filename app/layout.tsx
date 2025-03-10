@@ -9,9 +9,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Loyal IT Solutions - India's Top Odoo Service Provider",
+  title: "VICTSS - India's Top Odoo Service Provider",
   description:
-    "Unlock the future with Loyal IT Solutions - India's top Odoo service provider. Experience excellence through our innovative solutions.",
+    "Unlock the future with Verma ICT & Software Solutions - India's top ERP service provider. Experience excellence through our innovative solutions.",
   generator: "v0.dev",
 }
 

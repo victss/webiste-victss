@@ -42,7 +42,7 @@ export default function ERPImplementationPage() {
             </div>
             <div className="flex items-center justify-center">
               <Image
-                src="/placeholder.svg?height=550&width=550"
+                src="https://azka.tech/wp-content/uploads/2019/11/erp-2.png?height=550&width=550"
                 width={550}
                 height={550}
                 alt="ERP Implementation"
@@ -202,7 +202,7 @@ export default function ERPImplementationPage() {
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
             <div className="flex items-center justify-center">
               <Image
-                src="/placeholder.svg?height=550&width=550"
+                src="https://www.matiyas.com/wp-content/uploads/2024/06/erp-implementation-1024x1024.png?height=550&width=550"
                 width={550}
                 height={550}
                 alt="ERP Case Study"
