@@ -42,7 +42,11 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",
+<<<<<<< HEAD
     "date-fns": "^3.6.0",
+=======
+    "date-fns": "4.1.0",
+>>>>>>> 6927d3df (fix commit)
     "embla-carousel-react": "8.5.1",
     "framer-motion": "^12.4.10",
     "input-otp": "1.4.1",
@@ -63,11 +67,20 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@types/node": "22.13.10",
     "@types/react": "19.0.10",
     "@types/react-dom": "^19",
     "postcss": "^8",
     "tailwindcss": "^3.4.17",
     "typescript": "5.8.2"
+=======
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5"
+>>>>>>> 6927d3df (fix commit)
   }
 }
