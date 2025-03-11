@@ -298,7 +298,7 @@ const services = [
   },
   {
     title: "DevOps",
-    href: "/services/devops",
+    href: "/coming-soon",
     description: "Streamline your development and operations with our DevOps expertise.",
     icon: "⚙️"
   },
@@ -322,7 +322,7 @@ const services = [
   },
   {
     title: "Mobile Application",
-    href: "/services/mobile-development",
+    href: "/coming-soon",
     description: "Native and cross-platform mobile app development.",
     icon: "📱"
   },
