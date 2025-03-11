@@ -27,7 +27,7 @@ export default function Footer() {
                 VICTSS
               </span>
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-sm font-medium" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-                Solutions
+                Verma ICT & Software Solutions
               </span>
             </Link>
             <p className="text-sm text-gray-400" style={{ fontFamily: "'Montserrat', sans-serif" }}>
@@ -130,7 +130,37 @@ export default function Footer() {
                 <div className="p-2 mr-3 rounded-full bg-gray-800 group-hover:bg-indigo-900/50 border border-gray-700 group-hover:border-indigo-500/30 transition-all duration-300">
                   <Mail className="h-4 w-4 text-indigo-400" />
                 </div>
-                <span className="text-gray-400 group-hover:text-indigo-300 transition-colors duration-300" style={{ fontFamily: "'Montserrat', sans-serif" }}>info@victss.com</span>
+                <div>
+                  <span className="text-gray-400 group-hover:text-indigo-300 transition-colors duration-300" style={{ fontFamily: "'Montserrat', sans-serif" }}>sales@victss.com</span>
+                  <p className="text-xs text-gray-500">For sales-related queries.</p>
+                </div>
+              </li>
+              <li className="flex items-center group">
+                <div className="p-2 mr-3 rounded-full bg-gray-800 group-hover:bg-indigo-900/50 border border-gray-700 group-hover:border-indigo-500/30 transition-all duration-300">
+                  <Mail className="h-4 w-4 text-indigo-400" />
+                </div>
+                <div>
+                  <span className="text-gray-400 group-hover:text-indigo-300 transition-colors duration-300" style={{ fontFamily: "'Montserrat', sans-serif" }}>info@victss.com</span>
+                  <p className="text-xs text-gray-500">For general information.</p>
+                </div>
+              </li>
+              <li className="flex items-center group">
+                <div className="p-2 mr-3 rounded-full bg-gray-800 group-hover:bg-indigo-900/50 border border-gray-700 group-hover:border-indigo-500/30 transition-all duration-300">
+                  <Mail className="h-4 w-4 text-indigo-400" />
+                </div>
+                <div>
+                  <span className="text-gray-400 group-hover:text-indigo-300 transition-colors duration-300" style={{ fontFamily: "'Montserrat', sans-serif" }}>contact@victss.com</span>
+                  <p className="text-xs text-gray-500">For contact-related queries.</p>
+                </div>
+              </li>
+              <li className="flex items-center group">
+                <div className="p-2 mr-3 rounded-full bg-gray-800 group-hover:bg-indigo-900/50 border border-gray-700 group-hover:border-indigo-500/30 transition-all duration-300">
+                  <Mail className="h-4 w-4 text-indigo-400" />
+                </div>
+                <div>
+                  <span className="text-gray-400 group-hover:text-indigo-300 transition-colors duration-300" style={{ fontFamily: "'Montserrat', sans-serif" }}>support@victss.com</span>
+                  <p className="text-xs text-gray-500">For support-related queries.</p>
+                </div>
               </li>
             </ul>
           </div>
@@ -153,7 +183,7 @@ export default function Footer() {
                 <p className="text-sm text-gray-400" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                   Airport Road
                   <br />
-                  Ranchi, Jharkhand - 560001
+                  Ranchi, Jharkhand
                 </p>
               </div>
             </div>
@@ -168,7 +198,7 @@ export default function Footer() {
                 <p className="text-sm text-gray-400" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                   Monal Enclave, Near Banjarawala
                   <br />
-                  Dehradun, Uttarakhand - 248001
+                  Dehradun, Uttarakhand
                 </p>
               </div>
             </div>
@@ -183,7 +213,7 @@ export default function Footer() {
                 <p className="text-sm text-gray-400" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                   Kathgodam, Haldwani
                   <br />
-                  Nainital, Uttarakhand - 263126
+                  Nainital, Uttarakhand
                 </p>
               </div>
             </div>
