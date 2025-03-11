@@ -1,14 +1,21 @@
 "use client"; // Mark this component as a Client Component
 
 import Link from "next/link";
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ChevronRight } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-r from-blue-900 to-purple-900 text-white">
-      {/* Animated Background */}
+    <footer className="relative overflow-hidden bg-gray-900 text-white">
+      {/* Dark Theme Background with Animated Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="animate-gradient bg-gradient-to-r from-blue-800 to-purple-800 via-blue-900 h-full w-full"></div>
+        <div className="bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-900/20 via-gray-900 to-gray-950 h-full w-full"></div>
+        {/* Particle effect */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+      </div>
+      
+      {/* Glow Lines */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="glow-line absolute h-px w-full bg-gradient-to-r from-transparent via-indigo-500/20 to-transparent top-0 animate-pulse-slow"></div>
       </div>
 
       <div className="container relative z-10 py-12 md:py-16">
@@ -16,28 +23,40 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 font-bold text-xl">
-              <span className="text-white">VICTSS</span>
-              <span className="text-blue-200"></span>
+              <span className="text-white font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                VICTSS
+              </span>
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-sm font-medium" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                Solutions
+              </span>
             </Link>
-            <p className="text-sm text-blue-200">
+            <p className="text-sm text-gray-400" style={{ fontFamily: "'Montserrat', sans-serif" }}>
               Unlock the future with Verma ICT & Software Solutions (VICTSS) - India's top Odoo service provider. Experience excellence
               through our innovative solutions, driving your business to new heights of success and efficiency.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-blue-200 hover:text-white">
-                <Facebook className="h-5 w-5" />
+              <Link href="#" className="text-gray-400 hover:text-indigo-400 transition-colors duration-300">
+                <div className="p-2 rounded-full bg-gray-800 hover:bg-indigo-900/50 border border-gray-700 hover:border-indigo-500/30 transition-all duration-300">
+                  <Facebook className="h-4 w-4" />
+                </div>
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="text-blue-200 hover:text-white">
-                <Twitter className="h-5 w-5" />
+              <Link href="#" className="text-gray-400 hover:text-indigo-400 transition-colors duration-300">
+                <div className="p-2 rounded-full bg-gray-800 hover:bg-indigo-900/50 border border-gray-700 hover:border-indigo-500/30 transition-all duration-300">
+                  <Twitter className="h-4 w-4" />
+                </div>
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="#" className="text-blue-200 hover:text-white">
-                <Linkedin className="h-5 w-5" />
+              <Link href="#" className="text-gray-400 hover:text-indigo-400 transition-colors duration-300">
+                <div className="p-2 rounded-full bg-gray-800 hover:bg-indigo-900/50 border border-gray-700 hover:border-indigo-500/30 transition-all duration-300">
+                  <Linkedin className="h-4 w-4" />
+                </div>
                 <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link href="https://www.instagram.com/victss.dev/" className="text-blue-200 hover:text-white">
-                <Instagram className="h-5 w-5" />
+              <Link href="https://www.instagram.com/victss.dev/" className="text-gray-400 hover:text-indigo-400 transition-colors duration-300">
+                <div className="p-2 rounded-full bg-gray-800 hover:bg-indigo-900/50 border border-gray-700 hover:border-indigo-500/30 transition-all duration-300">
+                  <Instagram className="h-4 w-4" />
+                </div>
                 <span className="sr-only">Instagram</span>
               </Link>
             </div>
@@ -45,122 +64,108 @@ export default function Footer() {
 
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="text-lg font-medium">Services</h3>
+            <h3 className="text-lg font-medium text-white relative w-fit" style={{ fontFamily: "'Poppins', sans-serif" }}>
+              Services
+              <span className="absolute -bottom-1 left-0 w-12 h-0.5 bg-indigo-500"></span>
+            </h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/services/odoo-solutions" className="text-blue-200 hover:text-white">
-                  Odoo Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/devops" className="text-blue-200 hover:text-white">
-                  DevOps
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/web-development" className="text-blue-200 hover:text-white">
-                  Web Application
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/erp-implementation" className="text-blue-200 hover:text-white">
-                  ERP Deployment
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/it-consulting" className="text-blue-200 hover:text-white">
-                  IT Consulting
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/mobile-development" className="text-blue-200 hover:text-white">
-                  Mobile Application
-                </Link>
-              </li>
+              {[
+                { href: "/services/odoo-solutions", label: "Odoo Services" },
+                { href: "/services/devops", label: "DevOps" },
+                { href: "/services/web-development", label: "Web Application" },
+                { href: "/services/erp-implementation", label: "ERP Deployment" },
+                { href: "/services/it-consulting", label: "IT Consulting" },
+                { href: "/services/mobile-development", label: "Mobile Application" }
+              ].map((item, index) => (
+                <li key={index}>
+                  <Link href={item.href} className="text-gray-400 hover:text-indigo-300 transition-colors duration-300 flex items-center group">
+                    <ChevronRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1 text-indigo-400" />
+                    <span style={{ fontFamily: "'Montserrat', sans-serif" }}>{item.label}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Solutions */}
           <div className="space-y-4">
-            <h3 className="text-lg font-medium">Solutions</h3>
+            <h3 className="text-lg font-medium text-white relative w-fit" style={{ fontFamily: "'Poppins', sans-serif" }}>
+              Solutions
+              <span className="absolute -bottom-1 left-0 w-12 h-0.5 bg-indigo-500"></span>
+            </h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/solutions/wholesale" className="text-blue-200 hover:text-white">
-                  Wholesale
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions/service-management" className="text-blue-200 hover:text-white">
-                  Service Management
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions/project-management" className="text-blue-200 hover:text-white">
-                  Project Management
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions/manufacturing" className="text-blue-200 hover:text-white">
-                  Manufacturing
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions/logistics" className="text-blue-200 hover:text-white">
-                  Logistics
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions/hrms" className="text-blue-200 hover:text-white">
-                  HRMS
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions/hospitality" className="text-blue-200 hover:text-white">
-                  Hospitality Management
-                </Link>
-              </li>
+              {[
+                { href: "/coming-soon", label: "Wholesale" },
+                { href: "/coming-soon", label: "Service Management" },
+                { href: "/coming-soon", label: "Project Management" },
+                { href: "/coming-soon", label: "Manufacturing" },
+                { href: "/coming-soon", label: "Logistics" },
+                { href: "/coming-soon", label: "HRMS" },
+                { href: "/coming-soon", label: "Hospitality Management" }
+              ].map((item, index) => (
+                <li key={index}>
+                  <Link href={item.href} className="text-gray-400 hover:text-indigo-300 transition-colors duration-300 flex items-center group">
+                    <ChevronRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1 text-indigo-400" />
+                    <span style={{ fontFamily: "'Montserrat', sans-serif" }}>{item.label}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact Us */}
           <div className="space-y-4">
-            <h3 className="text-lg font-medium">Contact Us</h3>
+            <h3 className="text-lg font-medium text-white relative w-fit" style={{ fontFamily: "'Poppins', sans-serif" }}>
+              Contact Us
+              <span className="absolute -bottom-1 left-0 w-12 h-0.5 bg-indigo-500"></span>
+            </h3>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-center">
-                <Phone className="h-5 w-5 text-blue-300 mr-2" />
-                <span className="text-blue-200">+91 83929 45644</span>
+              <li className="flex items-center group">
+                <div className="p-2 mr-3 rounded-full bg-gray-800 group-hover:bg-indigo-900/50 border border-gray-700 group-hover:border-indigo-500/30 transition-all duration-300">
+                  <Phone className="h-4 w-4 text-indigo-400" />
+                </div>
+                <span className="text-gray-400 group-hover:text-indigo-300 transition-colors duration-300" style={{ fontFamily: "'Montserrat', sans-serif" }}>+91 83929 45644</span>
               </li>
-              <li className="flex items-center">
-                <Mail className="h-5 w-5 text-blue-300 mr-2" />
-                <span className="text-blue-200">info@victss.com</span>
+              <li className="flex items-center group">
+                <div className="p-2 mr-3 rounded-full bg-gray-800 group-hover:bg-indigo-900/50 border border-gray-700 group-hover:border-indigo-500/30 transition-all duration-300">
+                  <Mail className="h-4 w-4 text-indigo-400" />
+                </div>
+                <span className="text-gray-400 group-hover:text-indigo-300 transition-colors duration-300" style={{ fontFamily: "'Montserrat', sans-serif" }}>info@victss.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         {/* Branch Offices Section */}
-        <div className="mt-12 pt-8 border-t border-blue-800">
-          <h3 className="text-lg font-medium mb-6">Our Branch Offices</h3>
+        <div className="mt-12 pt-8 border-t border-gray-800">
+          <h3 className="text-lg font-medium mb-6 text-white relative w-fit" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            Our Branch Offices
+            <span className="absolute -bottom-1 left-0 w-16 h-0.5 bg-indigo-500"></span>
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Ranchi Office - Head Office */}
-            <div className="flex items-start space-x-4">
-              <MapPin className="h-6 w-6 text-blue-300 mt-1" />
+            <div className="flex items-start space-x-4 group">
+              <div className="p-3 rounded-lg bg-gray-800 group-hover:bg-indigo-900/30 border border-gray-700 group-hover:border-indigo-500/30 transition-all duration-300 mt-1">
+                <MapPin className="h-5 w-5 text-indigo-400" />
+              </div>
               <div>
-                <h4 className="font-medium">Ranchi Office <span className="text-blue-300 text-sm">(Head Office)</span></h4>
-                <p className="text-sm text-blue-200">
+                <h4 className="font-medium text-white" style={{ fontFamily: "'Poppins', sans-serif" }}>Ranchi Office <span className="text-indigo-400 text-xs">Head Office</span></h4>
+                <p className="text-sm text-gray-400" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                   Airport Road
                   <br />
-                 Ranchi, Jharkhand - 560001
+                  Ranchi, Jharkhand - 560001
                 </p>
               </div>
             </div>
 
             {/* Dehradun Office */}
-            <div className="flex items-start space-x-4">
-              <MapPin className="h-6 w-6 text-blue-300 mt-1" />
+            <div className="flex items-start space-x-4 group">
+              <div className="p-3 rounded-lg bg-gray-800 group-hover:bg-indigo-900/30 border border-gray-700 group-hover:border-indigo-500/30 transition-all duration-300 mt-1">
+                <MapPin className="h-5 w-5 text-indigo-400" />
+              </div>
               <div>
-                <h4 className="font-medium">Dehradun Office</h4>
-                <p className="text-sm text-blue-200">
+                <h4 className="font-medium text-white" style={{ fontFamily: "'Poppins', sans-serif" }}>Dehradun Office</h4>
+                <p className="text-sm text-gray-400" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                   Monal Enclave, Near Banjarawala
                   <br />
                   Dehradun, Uttarakhand - 248001
@@ -169,11 +174,13 @@ export default function Footer() {
             </div>
 
             {/* Haldwani Office */}
-            <div className="flex items-start space-x-4">
-              <MapPin className="h-6 w-6 text-blue-300 mt-1" />
+            <div className="flex items-start space-x-4 group">
+              <div className="p-3 rounded-lg bg-gray-800 group-hover:bg-indigo-900/30 border border-gray-700 group-hover:border-indigo-500/30 transition-all duration-300 mt-1">
+                <MapPin className="h-5 w-5 text-indigo-400" />
+              </div>
               <div>
-                <h4 className="font-medium">Haldwani Office</h4>
-                <p className="text-sm text-blue-200">
+                <h4 className="font-medium text-white" style={{ fontFamily: "'Poppins', sans-serif" }}>Haldwani Office</h4>
+                <p className="text-sm text-gray-400" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                   Kathgodam, Haldwani
                   <br />
                   Nainital, Uttarakhand - 263126
@@ -184,39 +191,40 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-12 pt-8 border-t border-blue-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-blue-300">© 2025 Verma ICT & Software Solutions. All rights reserved.</p>
+        <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-gray-500" style={{ fontFamily: "'Montserrat', sans-serif" }}>© 2025 Verma ICT & Software Solutions. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy-policy" className="text-xs text-blue-300 hover:text-white">
-              Privacy Policy
-            </Link>
-            <Link href="/terms-of-service" className="text-xs text-blue-300 hover:text-white">
-              Terms of Service
-            </Link>
-            <Link href="/sitemap" className="text-xs text-blue-300 hover:text-white">
-              Sitemap
-            </Link>
+            {[
+              { href: "/privacy-policy", label: "Privacy Policy" },
+              { href: "/terms-of-service", label: "Terms of Service" },
+              { href: "/sitemap", label: "Sitemap" }
+            ].map((item, index) => (
+              <Link key={index} href={item.href} className="text-xs text-gray-500 hover:text-indigo-400 transition-colors duration-300" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                {item.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* CSS for Animated Background */}
+      {/* CSS for Animated Elements */}
       <style jsx>{`
-        @keyframes gradient {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
+        @keyframes pulse-slow {
+          0%, 100% { opacity: 0.1; }
+          50% { opacity: 0.3; }
         }
-        .animate-gradient {
-          background-size: 200% 200%;
-          animation: gradient 10s ease infinite;
+        
+        .animate-pulse-slow {
+          animation: pulse-slow 8s infinite;
         }
+        
+        .bg-grid-pattern {
+          background-image: radial-gradient(circle, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+          background-size: 30px 30px;
+        }
+        
+        /* Make sure to add font imports to your main CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@400;600;700&display=swap');
       `}</style>
     </footer>
   );
