@@ -72,7 +72,7 @@ export default function ContactPage() {
                   <p className="text-sm text-gray-300" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                     Monal Enclave, Near Banjarawala
                     <br />
-                    Dehradun, Uttarakhand - 248001
+                    Dehradun, Uttarakhand
                   </p>
                 </div>
               </motion.div>
@@ -84,7 +84,7 @@ export default function ContactPage() {
                   <p className="text-sm text-gray-300" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                     Kathgodam, Haldwani
                     <br />
-                    Nainital, Uttarakhand - 263126
+                    Nainital, Uttarakhand
                   </p>
                 </div>
               </motion.div>
@@ -101,7 +101,15 @@ export default function ContactPage() {
                 <Mail className="h-6 w-6 text-indigo-400 flex-shrink-0" />
                 <div>
                   <h3 className="font-medium" style={{ fontFamily: "'Poppins', sans-serif" }}>Email</h3>
-                  <p className="text-sm text-gray-300" style={{ fontFamily: "'Montserrat', sans-serif" }}>info@victss.com</p>
+                  <p className="text-sm text-gray-300" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                    sales@victss.com <span className="text-xs text-gray-500">(For sales-related queries)</span>
+                    <br />
+                    info@victss.com <span className="text-xs text-gray-500">(For general information)</span>
+                    <br />
+                    contact@victss.com <span className="text-xs text-gray-500">(For contact-related queries)</span>
+                    <br />
+                    support@victss.com <span className="text-xs text-gray-500">(For support-related queries)</span>
+                  </p>
                 </div>
               </motion.div>
               {/* Hours */}
