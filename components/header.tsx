@@ -222,7 +222,7 @@ const services = [
 const solutions = [
   {
     title: "Wholesale",
-    href: "/solutions/wholesale",
+    href: "/coming-soon",
     description: "Specialized IT solutions for wholesale distribution businesses.",
     icon: "fas fa-boxes", // FontAwesome icon for Wholesale
     iconSize: "24px", // Icon size

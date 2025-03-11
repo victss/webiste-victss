@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "webiste-victss",
+			"problemMatcher": [],
+			"label": "npm: start - webiste-victss",
+			"detail": "next start"
+		}
+	]
+}
