@@ -71,11 +71,11 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {[
                 { href: "/services/odoo-solutions", label: "Odoo Services" },
-                { href: "/services/devops", label: "DevOps" },
+                { href: "/coming-soon", label: "DevOps" },
                 { href: "/services/web-development", label: "Web Application" },
                 { href: "/services/erp-implementation", label: "ERP Deployment" },
                 { href: "/services/it-consulting", label: "IT Consulting" },
-                { href: "/services/mobile-development", label: "Mobile Application" }
+                { href: "/coming-soon", label: "Mobile Application" }
               ].map((item, index) => (
                 <li key={index}>
                   <Link href={item.href} className="text-gray-400 hover:text-indigo-300 transition-colors duration-300 flex items-center group">
