@@ -9,7 +9,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "VICTSS - India's Top Odoo Service Provider",
+  title: "VICTSS - Unlock the future with Verma ICT & Software Solutions",
   description:
     "Unlock the future with Verma ICT & Software Solutions - India's top ERP service provider. Experience excellence through our innovative solutions.",
   generator: "v0.dev",
