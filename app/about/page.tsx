@@ -13,11 +13,11 @@ export default function AboutPage() {
             <div className="space-y-4">
               <div className="inline-block rounded-lg bg-white/10 px-3 py-1 text-sm">About Us</div>
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                India's Leading Odoo Based Service Provider
+                India's Leading Odoo Service Provider
               </h1>
               <p className="text-xl text-blue-100">
                 VICTSS is a premier IT service provider specializing in ERP Odoo implementation, customization,
-                and support. With years of experience and a team of certified experts, we help businesses transform
+                and support. With years of experience and a team of experts, we help businesses transform
                 their operations and achieve their goals.
               </p>
             </div>
