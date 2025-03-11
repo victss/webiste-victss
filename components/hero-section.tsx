@@ -11,7 +11,7 @@ export function HeroSection() {
   const [currentImage, setCurrentImage] = useState(0)
 
   const slides = [
-    "Experience Excellence with",
+    "Experience Excellence wityth",
     "Transform Your Business with",
     "Achieve Growth with",
     "Unlock Potential with",

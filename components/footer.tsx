@@ -148,9 +148,9 @@ export default function Footer() {
               <div>
                 <h4 className="font-medium">Ranchi Office <span className="text-blue-300 text-sm">(Head Office)</span></h4>
                 <p className="text-sm text-blue-200">
-                  Airport Road, Kunwar Singh Colony
+                  Airport Road
                   <br />
-                  Doranda, Ranchi, Jharkhand - 560001
+                 Ranchi, Jharkhand - 560001
                 </p>
               </div>
             </div>
