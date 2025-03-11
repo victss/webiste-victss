@@ -35,19 +35,19 @@ export default function Footer() {
               through our innovative solutions, driving your business to new heights of success and efficiency.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-gray-400 hover:text-indigo-400 transition-colors duration-300">
+              <Link href="https://www.facebook.com/victss.dev/" className="text-gray-400 hover:text-indigo-400 transition-colors duration-300">
                 <div className="p-2 rounded-full bg-gray-800 hover:bg-indigo-900/50 border border-gray-700 hover:border-indigo-500/30 transition-all duration-300">
                   <Facebook className="h-4 w-4" />
                 </div>
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-indigo-400 transition-colors duration-300">
+              <Link href="https://x.com/victss_dev" className="text-gray-400 hover:text-indigo-400 transition-colors duration-300">
                 <div className="p-2 rounded-full bg-gray-800 hover:bg-indigo-900/50 border border-gray-700 hover:border-indigo-500/30 transition-all duration-300">
                   <Twitter className="h-4 w-4" />
                 </div>
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-indigo-400 transition-colors duration-300">
+              <Link href="https://www.linkedin.com/company/victss" className="text-gray-400 hover:text-indigo-400 transition-colors duration-300">
                 <div className="p-2 rounded-full bg-gray-800 hover:bg-indigo-900/50 border border-gray-700 hover:border-indigo-500/30 transition-all duration-300">
                   <Linkedin className="h-4 w-4" />
                 </div>
