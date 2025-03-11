@@ -229,42 +229,42 @@ const solutions = [
   },
   {
     title: "Service Management",
-    href: "/solutions/service-management",
+    href: "/coming-soon",
     description: "Streamline service operations and improve customer satisfaction.",
     icon: "fas fa-cogs", // FontAwesome icon for Service Management
     iconSize: "24px",
   },
   {
     title: "Project Management",
-    href: "/solutions/project-management",
+    href: "/coming-soon",
     description: "Tools and systems to manage projects efficiently and effectively.",
     icon: "fas fa-tasks", // FontAwesome icon for Project Management
     iconSize: "24px",
   },
   {
     title: "Manufacturing",
-    href: "/solutions/manufacturing",
+    href: "/coming-soon",
     description: "Optimize manufacturing processes with our specialized solutions.",
     icon: "fas fa-industry", // FontAwesome icon for Manufacturing
     iconSize: "24px",
   },
   {
     title: "Logistics",
-    href: "/solutions/logistics",
+    href: "/coming-soon",
     description: "Enhance logistics operations with our technology solutions.",
     icon: "fas fa-truck", // FontAwesome icon for Logistics
     iconSize: "24px",
   },
   {
     title: "HRMS",
-    href: "/solutions/hrms",
+    href: "/coming-soon",
     description: "Comprehensive human resource management systems for your business.",
     icon: "fas fa-users", // FontAwesome icon for HRMS
     iconSize: "24px",
   },
   {
     title: "Hospitality Management",
-    href: "/solutions/hospitality",
+    href: "/coming-soon",
     description: "Specialized solutions for the hospitality industry.",
     icon: "fas fa-concierge-bell", // FontAwesome icon for Hospitality Management
     iconSize: "24px",
