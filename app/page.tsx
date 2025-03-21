@@ -7,6 +7,9 @@ import { TestimonialsSection } from "@/components/testimonials-section"
 import { CTASection } from "@/components/cta-section"
 import { ClientsSection } from "@/components/clients-section"
 import { OurClientsSection } from "@/components/client"
+import { GemPromotion } from "@/components/gem"
+import { Certifications } from "@/components/certification";
+
 
 export default function Home() {
   return (
@@ -17,8 +20,10 @@ export default function Home() {
       <IndustriesSection />
       <OdooFeatures />
       <FeaturesSection />
+      <Certifications />
       <TestimonialsSection />
       <OurClientsSection/>
+      <GemPromotion />
       <CTASection />
     </>
   )

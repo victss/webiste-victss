@@ -32,40 +32,26 @@ export function TestimonialsSection() {
 
   const testimonials = [
     {
-      name: "Anil Verma",
-      position: "CTO, TechNova Solutions",
+      name: "Pradeep Chaubey",
+      position: "CEO, EnR Consultancy Services",
       feedback:
-        "VICTSS provided us with a customized ERP solution that perfectly fits our business operations. Their team’s attention to detail and technical expertise streamlined our workflow and boosted productivity by 50%.",
-      avatar: "/placeholder.svg?height=40&width=40",
+      "Our Client Website developed by VICTSS has transformed our customer experience. The website is fast, intuitive, and feature-rich. Their team was always responsive and delivered on time.",
+      Image: "https://engagenreap.com/wp-content/uploads/2025/01/Group-270-1.png?height=40&width=40",
     },
     {
-      name: "Sonia Sharma",
-      position: "Operations Head, RetailX",
+      name: "Arjun Rawat",
+      position: "Owner, Avril Homestay & RCR Industries",
       feedback:
-        "Our mobile app developed by VICTSS has transformed our customer experience. The app is fast, intuitive, and feature-rich. Their team was always responsive and delivered on time.",
-      avatar: "/placeholder.svg?height=40&width=40",
+        "Managing our homestay bookings and shop inventory was challenging until we partnered with VICTSS. Their solution streamlined our operations, making reservations effortless and inventory tracking seamless. The automation features have saved us valuable time and improved overall efficiency. Highly recommended!" ,
+        AvatarImage: "/placeholder.svg?height=40&width=40",
     },
     {
-      name: "Vikram Desai",
-      position: "CEO, FinEdge Corp",
-      feedback:
-        "We needed a robust ERP solution, and VICTSS delivered beyond expectations. The seamless integration with our existing systems and the automation features saved us countless hours of manual work.",
-      avatar: "/placeholder.svg?height=40&width=40",
-    },
-    {
-      name: "Meera Joshi",
-      position: "Founder, EduTech Innovations",
-      feedback:
-        "VICTSS helped us launch an education app with real-time collaboration features. Their team’s expertise in product development and mobile solutions gave our startup a competitive edge.",
-      avatar: "/placeholder.svg?height=40&width=40",
-    },
-    {
-      name: "Rajat Malhotra",
-      position: "COO, LogiSync Pvt Ltd",
-      feedback:
-        "The ERP customization by VICTSS revolutionized our supply chain management. Their team understood our pain points and built features that significantly improved our logistics tracking and efficiency.",
-      avatar: "/placeholder.svg?height=40&width=40",
-    },
+      "name": "Shankar Negi",
+      "position": "Owner, Negi Enterprise",
+      "feedback": "We needed a custom ERP solution and SEO expertise to enhance our business operations and online presence. VICTSS delivered exactly what we required, streamlining our processes and improving our digital reach. Their solutions have significantly boosted efficiency and visibility. Highly recommended!",
+      "AvatarImage": "/placeholder.svg?height=40&width=40"
+    }
+    
   ];
 
   return (

@@ -23,17 +23,18 @@ export function ClientsSection() {
           {/* Auto-Scrolling Logos */}
           <div className="flex overflow-hidden">
             <div className="flex animate-scroll space-x-6">
-              {[
-                { id: 1, logo: 'https://www.drupal.org/files/project-images/Logo%20ONLYOFFICE.png', alt: 'Client 1' },
-                { id: 2, logo: 'https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png', alt: 'Client 2' },
-                { id: 3, logo: 'https://www.adobe.com/cc-shared/assets/img/social-media-logos/creativecloud-social.jpg', alt: 'Client 3' },
-                { id: 4, logo: 'math.png', alt: 'Client 4' },
-                { id: 5, logo: 'smart.png', alt: 'Client 5' },
-                { id: 6, logo: 'asld.png', alt: 'Client 6' },
-                { id: 7, logo: 'https://pngimg.com/d/microsoft_PNG6.png', alt: 'Client 7' },
-              ].map((client) => (
-                <ClientCard key={client.id} logo={client.logo} alt={client.alt} />
-              ))}
+            {[
+  { id: 1, logo: "https://www.drupal.org/files/project-images/Logo%20ONLYOFFICE.png", alt: "Client 1", website: "https://www.onlyoffice.com" },
+  { id: 2, logo: "https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png", alt: "Client 2", website: "https://aws.amazon.com" },
+  { id: 3, logo: "https://www.adobe.com/cc-shared/assets/img/social-media-logos/creativecloud-social.jpg", alt: "Client 3", website: "https://www.adobe.com" },
+  { id: 4, logo: "math.png", alt: "Client 4", website: "https://www.wiris.com/en/" },
+  { id: 5, logo: "smart.png", alt: "Client 5", website: "https://www.smartpls.com/" },
+  { id: 6, logo: "asld.png", alt: "Client 6", website: "https://www.asldweb.com" },
+  { id: 7, logo: "https://pngimg.com/d/microsoft_PNG6.png", alt: "Client 7", website: "https://www.microsoft.com" },
+].map((client) => (
+  <ClientCard key={client.id} logo={client.logo} alt={client.alt} website={client.website} />
+))}
+
             </div>
           </div>
         </div>
@@ -56,14 +57,15 @@ export function ClientsSection() {
   );
 }
 
-function ClientCard({ logo, alt }: { logo: string; alt: string }) {
+function ClientCard({ logo, alt, website }: { logo: string; alt: string; website: string }) {
   return (
     <Card className="bg-transparent border-0 shadow-none group">
       <CardContent className="p-8 flex flex-col items-center text-center space-y-2">
-        <div className="w-28 h-28 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 ease-in-out">
+        <a href={website} target="_blank" rel="noopener noreferrer" className="w-28 h-28 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 ease-in-out">
           <img src={logo} alt={alt} className="h-12 object-contain transition-all" />
-        </div>
+        </a>
       </CardContent>
     </Card>
   );
 }
+
