@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Mail, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
-// Animation variants for Framer Motion
+// Animation variants for Framer Motion..
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
