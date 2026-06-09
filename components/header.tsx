@@ -133,6 +133,31 @@ export default function Header() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+              <NavigationMenuItem
+                onMouseEnter={() => setHoveredMenu('products')}
+                onMouseLeave={() => setHoveredMenu(null)}
+              >
+                <NavigationMenuTrigger className={cn(
+                  "font-medium bg-gradient-to-r",
+                  hoveredMenu === 'products'
+                    ? "from-blue-600/10 to-purple-600/10"
+                    : "from-blue-600/0 to-purple-600/0"
+                )}>Products</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-6 md:w-[500px] md:grid-cols-2 lg:w-[650px] rounded-xl shadow-xl bg-white/95">
+                    {products.map((product) => (
+                      <ListItem
+                        key={product.title}
+                        title={product.title}
+                        href={product.href}
+                        icon={product.icon || null}
+                      >
+                        {product.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link href="/contact" legacyBehavior passHref>
                   <NavigationMenuLink className={cn(
@@ -224,6 +249,27 @@ export default function Header() {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {solution.title}
+                  </Link>
+                ))}
+              </div>
+            </details>
+          </div>
+
+          <div className="border-t border-gray-100 pt-2">
+            <details className="group">
+              <summary className="flex justify-between items-center px-4 py-2 cursor-pointer rounded-lg hover:bg-gradient-to-r hover:from-blue-600/10 hover:to-purple-600/10">
+                <span className="font-medium">Products</span>
+                <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" />
+              </summary>
+              <div className="pl-4 mt-2 space-y-1">
+                {products.map((product) => (
+                  <Link
+                    key={product.title}
+                    href={product.href}
+                    className="flex items-center gap-2 px-4 py-2 text-sm text-gray-600 hover:text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {product.title}
                   </Link>
                 ))}
               </div>
@@ -383,5 +429,14 @@ const solutions = [
     href: "/coming-soon",
     description: "Specialized solutions for the hospitality industry.",
     icon: "🏨"
+  },
+]
+
+const products = [
+  {
+    title: "greytHR Full-Suite HRMS",
+    href: "/products/greythr",
+    description: "A complete HRMS solution for payroll, attendance, leave, recruitment, and employee self-service.",
+    icon: "🧑‍💼"
   },
 ]
