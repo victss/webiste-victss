@@ -2,6 +2,7 @@ import Image from "next/image";
 
 export function Certifications() {
   // Array of certifications with image URLs and details
+
   const certifications = [
     {
       name: "ISO 9001",
