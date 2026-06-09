@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Mail, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
 // Animation variants for Framer Motion
@@ -86,14 +86,6 @@ export default function ContactPage() {
                     <br />
                     Nainital, Uttarakhand
                   </p>
-                </div>
-              </motion.div>
-              {/* Phone */}
-              <motion.div className="flex items-start gap-4" variants={fadeInUp}>
-                <Phone className="h-6 w-6 text-indigo-400 flex-shrink-0" />
-                <div>
-                  <h3 className="font-medium" style={{ fontFamily: "'Poppins', sans-serif" }}>Phone</h3>
-                  <p className="text-sm text-gray-300" style={{ fontFamily: "'Montserrat', sans-serif" }}>+91 83939 45644</p>
                 </div>
               </motion.div>
               {/* Email */}

@@ -14,12 +14,12 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils"
-import { Menu, X, Phone, ChevronDown } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [hoveredMenu, setHoveredMenu] = useState(null)
+  const [hoveredMenu, setHoveredMenu] = useState<string | null>(null)
 
   // Handle scroll effect
   useEffect(() => {
@@ -30,17 +30,17 @@ export default function Header() {
         setScrolled(false)
       }
     }
-    
+
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
-    <header 
+    <header
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-300",
-        scrolled 
-          ? "bg-white/95 backdrop-blur shadow-md supports-[backdrop-filter]:bg-white/80" 
+        scrolled
+          ? "bg-white/95 backdrop-blur shadow-md supports-[backdrop-filter]:bg-white/80"
           : "bg-transparent"
       )}
     >
@@ -48,11 +48,11 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2 relative group">
             <div className="relative">
-              <Image 
-                src="/logo.webp" 
-                alt="Logo" 
-                width={54} 
-                height={54} 
+              <Image
+                src="/logo.webp"
+                alt="Logo"
+                width={54}
+                height={54}
                 className="transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-600/20 to-purple-600/20 blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -62,10 +62,6 @@ export default function Header() {
               <span className="text-gray-800 text-lg transform transition-all duration-300 group-hover:translate-x-1">&amp; Software Solutions</span>
             </div>
           </Link>
-          <div className="hidden md:flex items-center text-sm ml-4 bg-gradient-to-r from-blue-600/10 to-purple-600/10 py-1 px-3 rounded-full">
-            <Phone className="h-4 w-4 mr-1 text-blue-600" />
-            <span className="font-medium">+91 83929 45644</span>
-          </div>
         </div>
 
         <div className="hidden md:flex">
@@ -87,22 +83,22 @@ export default function Header() {
                   )}>About</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
-              <NavigationMenuItem 
+              <NavigationMenuItem
                 onMouseEnter={() => setHoveredMenu('services')}
                 onMouseLeave={() => setHoveredMenu(null)}
               >
                 <NavigationMenuTrigger className={cn(
                   "font-medium bg-gradient-to-r",
-                  hoveredMenu === 'services' 
-                    ? "from-blue-600/10 to-purple-600/10" 
+                  hoveredMenu === 'services'
+                    ? "from-blue-600/10 to-purple-600/10"
                     : "from-blue-600/0 to-purple-600/0"
                 )}>Services</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-6 md:w-[500px] md:grid-cols-2 lg:w-[650px] rounded-xl shadow-xl bg-white/95">
                     {services.map((service) => (
-                      <ListItem 
-                        key={service.title} 
-                        title={service.title} 
+                      <ListItem
+                        key={service.title}
+                        title={service.title}
                         href={service.href}
                         icon={service.icon || null}
                       >
@@ -118,16 +114,16 @@ export default function Header() {
               >
                 <NavigationMenuTrigger className={cn(
                   "font-medium bg-gradient-to-r",
-                  hoveredMenu === 'solutions' 
-                    ? "from-blue-600/10 to-purple-600/10" 
+                  hoveredMenu === 'solutions'
+                    ? "from-blue-600/10 to-purple-600/10"
                     : "from-blue-600/0 to-purple-600/0"
                 )}>Solutions</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-6 md:w-[500px] md:grid-cols-2 lg:w-[650px] rounded-xl shadow-xl bg-white/95">
                     {solutions.map((solution) => (
-                      <ListItem 
-                        key={solution.title} 
-                        title={solution.title} 
+                      <ListItem
+                        key={solution.title}
+                        title={solution.title}
                         href={solution.href}
                         icon={solution.icon || null}
                       >
@@ -156,10 +152,10 @@ export default function Header() {
           >
             <Link href="/contact">Get Started</Link>
           </Button>
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            className="md:hidden bg-gradient-to-r from-blue-600/5 to-purple-600/5" 
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden bg-gradient-to-r from-blue-600/5 to-purple-600/5"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -168,28 +164,28 @@ export default function Header() {
       </div>
 
       {/* Mobile menu with animation */}
-      <div 
+      <div
         className={cn(
           "md:hidden fixed inset-x-0 top-16 bg-white shadow-lg transition-all duration-300 ease-in-out overflow-hidden",
           isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         )}
       >
         <div className="container py-6 space-y-4">
-          <Link 
-            href="/" 
-            className="flex items-center py-2 px-4 rounded-lg hover:bg-gradient-to-r hover:from-blue-600/10 hover:to-purple-600/10 transition-colors" 
+          <Link
+            href="/"
+            className="flex items-center py-2 px-4 rounded-lg hover:bg-gradient-to-r hover:from-blue-600/10 hover:to-purple-600/10 transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
             <span className="font-medium">Home</span>
           </Link>
-          <Link 
-            href="/about" 
-            className="flex items-center py-2 px-4 rounded-lg hover:bg-gradient-to-r hover:from-blue-600/10 hover:to-purple-600/10 transition-colors" 
+          <Link
+            href="/about"
+            className="flex items-center py-2 px-4 rounded-lg hover:bg-gradient-to-r hover:from-blue-600/10 hover:to-purple-600/10 transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
             <span className="font-medium">About</span>
           </Link>
-          
+
           {/* Mobile Services accordion */}
           <div className="border-t border-gray-100 pt-2">
             <details className="group">
@@ -211,7 +207,7 @@ export default function Header() {
               </div>
             </details>
           </div>
-          
+
           {/* Mobile Solutions accordion */}
           <div className="border-t border-gray-100 pt-2">
             <details className="group">
@@ -233,15 +229,15 @@ export default function Header() {
               </div>
             </details>
           </div>
-          
-          <Link 
-            href="/contact" 
-            className="flex items-center py-2 px-4 rounded-lg hover:bg-gradient-to-r hover:from-blue-600/10 hover:to-purple-600/10 transition-colors" 
+
+          <Link
+            href="/contact"
+            className="flex items-center py-2 px-4 rounded-lg hover:bg-gradient-to-r hover:from-blue-600/10 hover:to-purple-600/10 transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
             <span className="font-medium">Contact</span>
           </Link>
-          
+
           <div className="pt-4 border-t border-gray-100">
             <Button
               asChild
@@ -258,7 +254,12 @@ export default function Header() {
   )
 }
 
-const ListItem = React.forwardRef(
+interface ListItemProps extends React.ComponentPropsWithoutRef<"a"> {
+  title: string;
+  icon?: string | null;
+}
+
+const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
   ({ className, title, children, href, icon, ...props }, ref) => {
     return (
       <li>

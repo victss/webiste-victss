@@ -1,7 +1,7 @@
 "use client"; // Mark this component as a Client Component
 
 import Link from "next/link";
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ChevronRight } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Instagram, Mail, MapPin, ChevronRight } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -120,12 +120,6 @@ export default function Footer() {
               <span className="absolute -bottom-1 left-0 w-12 h-0.5 bg-indigo-500"></span>
             </h3>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-center group">
-                <div className="p-2 mr-3 rounded-full bg-gray-800 group-hover:bg-indigo-900/50 border border-gray-700 group-hover:border-indigo-500/30 transition-all duration-300">
-                  <Phone className="h-4 w-4 text-indigo-400" />
-                </div>
-                <span className="text-gray-400 group-hover:text-indigo-300 transition-colors duration-300" style={{ fontFamily: "'Montserrat', sans-serif" }}>+91 83929 45644</span>
-              </li>
               <li className="flex items-center group">
                 <div className="p-2 mr-3 rounded-full bg-gray-800 group-hover:bg-indigo-900/50 border border-gray-700 group-hover:border-indigo-500/30 transition-all duration-300">
                   <Mail className="h-4 w-4 text-indigo-400" />
