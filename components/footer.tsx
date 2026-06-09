@@ -6,13 +6,13 @@ import { Facebook, Twitter, Linkedin, Instagram, Mail, MapPin, ChevronRight } fr
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-gray-900 text-white">
-      {/* Dark Theme Background with Animated Elements */}
+      {/* Dark Theme Background Aditya with Animated Elements */}
       <div className="absolute inset-0 z-0">
         <div className="bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-900/20 via-gray-900 to-gray-950 h-full w-full"></div>
         {/* Particle effect */}
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       </div>
-      
+
       {/* Glow Lines */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="glow-line absolute h-px w-full bg-gradient-to-r from-transparent via-indigo-500/20 to-transparent top-0 animate-pulse-slow"></div>
