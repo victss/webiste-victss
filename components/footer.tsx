@@ -190,7 +190,7 @@ export default function Footer() {
                 <p className="text-sm text-gray-400" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                   Rajapuri, Uttam Nagar
                   <br />
-                  South West,Delhi
+                  South West Delhi
                 </p>
               </div>
             </div>
