@@ -203,11 +203,11 @@ export default function Footer() {
                 <MapPin className="h-5 w-5 text-indigo-400" />
               </div>
               <div>
-                <h4 className="font-medium text-white" style={{ fontFamily: "'Poppins', sans-serif" }}>Haldwani Office</h4>
+                <h4 className="font-medium text-white" style={{ fontFamily: "'Poppins', sans-serif" }}>Delhi Office</h4>
                 <p className="text-sm text-gray-400" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-                  Kathgodam, Haldwani
+                  Rajapuri, Uttam Nagar
                   <br />
-                  Nainital, Uttarakhand
+                  South West, New Delhi
                 </p>
               </div>
             </div>
