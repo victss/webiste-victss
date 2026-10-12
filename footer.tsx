@@ -279,7 +279,7 @@ export default function Footer() {
                   className="text-sm text-gray-400"
                   style={{ fontFamily: "'Montserrat', sans-serif" }}
                 >
-                  Rajapuri, Uttam Nagar
+                  Rajapuri, Uttam Nagar 
                   <br />
                   South West Delhi
                 </p>
