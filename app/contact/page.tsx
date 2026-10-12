@@ -119,7 +119,7 @@ export default function ContactPage() {
                   >
                     Rajapuri, Uttam Nagar,
                     <br />
-                    South West, Delhi
+                    South West Delhi
                   </p>
                 </div>
               </motion.div>
